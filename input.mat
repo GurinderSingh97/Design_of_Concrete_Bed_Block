@@ -1,0 +1,74 @@
+% Reaction on the beam in N
+# name: Reaction
+# type: scalar
+70000
+
+% fck in N/mm^2
+# name: fck
+# type: scalar
+20
+
+% fy in N/mm^2
+# name: fy
+# type: scalar
+415
+
+% Permisible Compressive Stress in N/mm^2
+# name: Permisible_Compressive_Stress
+# type: scalar
+0.57
+
+% Effective thickness of wall in m
+# name: Effective_thickness_of_wall
+# type: scalar
+0.200
+
+% Overall thickness of wall in m
+# name: Overall_thickness_of_wall
+# type: scalar
+0.250
+
+% Width of beam in m
+# name: Width_of_beam
+# type: scalar
+0.250
+
+% Depth of beam in m
+# name: Depth_of_beam
+# type: scalar
+0.500
+
+% Unit weight of brick in KN/m^3
+# name: Unit_weight_brick
+# type: scalar
+20
+
+% Unit weight of concrete in KN/m^3
+# name: Unit_weight_concrete
+# type: scalar
+25
+
+% Height of Parapet wall in m
+# name: Height_of_papapet_wall
+# type: scalar
+1
+
+% Span of main beam in m
+# name: Span
+# type: scalar
+6
+
+% dia of reinforcement bar in mm
+# name: dia
+# type: scalar
+10
+
+% dia of stirrups reinforcement in mm
+# name: d
+# type: scalar
+8
+
+% No of stirrups legged
+# name: no_of_legged
+# type: scalar
+2
