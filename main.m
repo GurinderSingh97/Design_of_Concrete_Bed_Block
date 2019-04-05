@@ -18,11 +18,9 @@ printf("Depth_of_block = %d mm \n", Depth_of_block)
 disp("\n")
 Reaction_from_main_beam = (Reaction/1000);
 printf("Reaction_from_main_beam = %d KN \n", Reaction_from_main_beam)
- 
-Moment_from_reaction = ((Reaction/1000)*(Length_of_block/1000))/4;
-Moment = (Permissible_Compressive_Stress*(Length_of_block/8)*(Length_of_block-(Width_of_beam*1000))*(Length_of_block-(Width_of_beam*1000)))/1000000;
-M = Moment - Moment_from_reaction;
-Mu = 1.5*M;
+
+Moment = (Permissible_Compressive_Stress*((Effective_thickness_of_wall*1000)/8)*(Length_of_block-(Width_of_beam*1000))*(Length_of_block-(Width_of_beam*1000)))/1000000;
+Mu = 1.5*Moment;
 printf("Factored_Moment = %d kNm \n", Mu)
 
 Area_of_steel_required = 0.5*(fck/fy)*(1-sqrt(1-((4.6*Mu*1000000)/(fck*Effective_thickness_of_wall*1000*Depth_of_block*Depth_of_block))))*Effective_thickness_of_wall*1000*Depth_of_block;
