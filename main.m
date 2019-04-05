@@ -6,9 +6,9 @@ load input.mat
 load value.mat
 disp("Design of Concrete Bed Block")
 disp("\n")
-disp("When Concrete Bed is below the main beam")
+disp("When Concrete Bed Block is below the main beam")
 % Length of block
-Length_of_block = ceil((Reaction/(Permisible_Compressive_Stress*Effective_thickness_of_wall*1000))/100)*100;
+Length_of_block = ceil((Reaction/(Permissible_Compressive_Stress*Effective_thickness_of_wall*1000))/100)*100;
 printf("Length_of_block = %d mm \n", Length_of_block)
 
 % Depth of block
@@ -20,7 +20,7 @@ Reaction_from_main_beam = (Reaction/1000);
 printf("Reaction_from_main_beam = %d KN \n", Reaction_from_main_beam)
  
 Moment_from_reaction = ((Reaction/1000)*(Length_of_block/1000))/4;
-Moment = (Permisible_Compressive_Stress*(Length_of_block/8)*(Length_of_block-(Width_of_beam*1000))*(Length_of_block-(Width_of_beam*1000)))/1000000;
+Moment = (Permissible_Compressive_Stress*(Length_of_block/8)*(Length_of_block-(Width_of_beam*1000))*(Length_of_block-(Width_of_beam*1000)))/1000000;
 M = Moment - Moment_from_reaction;
 Mu = 1.5*M;
 printf("Factored_Moment = %d kNm \n", Mu)
@@ -44,7 +44,7 @@ No_of_reinforced_bars = round(Area_of_steel/Area_of_one_bar)
 
 disp("\n")
 disp("When main beam is embedded in the concrete bed block")
-Length_of_block = ceil((Reaction/(Permisible_Compressive_Stress*Effective_thickness_of_wall*1000))/100)*100;
+Length_of_block = ceil((Reaction/(Permissible_Compressive_Stress*Effective_thickness_of_wall*1000))/100)*100;
 printf("Length_of_block = %d mm \n", Length_of_block)
 
 % Depth of block
@@ -59,7 +59,7 @@ endif
 
 disp("\n")
 disp("Check for Shear Reinforcement")
-v = Permisible_Compressive_Stress*Effective_thickness_of_wall*1000;
+v = Permissible_Compressive_Stress*Effective_thickness_of_wall*1000;
 Distance_for_side_of_block_to_face_of_main_beam = ((Length_of_block) - (Width_of_beam*1000))/2;
 V = (v*((Length_of_block/2)-(Distance_for_side_of_block_to_face_of_main_beam)))/1000;
 printf("Shear_force_at_face_of_main_beam = %d KN \n", V)

@@ -14,7 +14,7 @@
 415
 
 % Permisible Compressive Stress in N/mm^2
-# name: Permisible_Compressive_Stress
+# name: Permissible_Compressive_Stress
 # type: scalar
 0.8
 
