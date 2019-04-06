@@ -21,8 +21,7 @@
 % Effective thickness of wall in m
 # name: Effective_thickness_of_wall
 # type: scalar
-0.200
-
+0.230
 % Width of beam in m
 # name: Width_of_beam
 # type: scalar
@@ -49,6 +48,6 @@
 2
 
 % Percentage of steel
-# name: pt
+# name: p
 # type: scalar
 0.3

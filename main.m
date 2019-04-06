@@ -19,7 +19,7 @@ disp("\n")
 Reaction_from_main_beam = (Reaction/1000);
 printf("Reaction_from_main_beam = %d KN \n", Reaction_from_main_beam)
 
-Moment = (Permissible_Compressive_Stress*((Effective_thickness_of_wall*1000)/8)*(Length_of_block-(Width_of_beam*1000))*(Length_of_block-(Width_of_beam*1000)))/1000000;
+Moment = (((Permissible_Compressive_Stress*(Effective_thickness_of_wall*1000))*((Length_of_block/2))*(Length_of_block-(Length_of_block/2)))/2)/1000000
 Mu = 1.5*Moment;
 printf("Factored_Moment = %d kNm \n", Mu)
 
@@ -34,6 +34,8 @@ elseif(Area_of_steel_required<Minimum_area_of_steel)
 Area_of_steel = Minimum_area_of_steel;
 printf("Area_of_steel = %d mm^2 \n", Area_of_steel)
 endif
+pt = (100*Area_of_steel)/((Effective_thickness_of_wall*1000)*Depth_of_block);
+printf("Percentage_of_steel = %d %% \n", pt)
 dia_of_reinforced_bar = dia;
 printf("dia_of_reinforced_bar = %d mm \n", dia_of_reinforced_bar)
 Area_of_one_bar = (pi/4)*dia*dia;
